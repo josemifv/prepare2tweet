@@ -13,13 +13,13 @@ def usage():
     Options
     \t -h \t --help        \t Shows usage
     \t -i \t --input-file  \t Input file which contains the text message
-    \t -o \t --output-dir  \t Output directory where the generated image will be stored
+    \t -o \t --output-file  \t Output file of the generated image
     """
 
 
 def main(argv):
     try:
-        options, args = getopt.gnu_getopt(argv, "hi:o:", ["help", "input-file=", "output-dir="])
+        options, args = getopt.gnu_getopt(argv, "hi:o:", ["help", "input-file=", "output-file="])
     except getopt.GetoptError as err:
         print str(err)
         usage()
@@ -32,11 +32,14 @@ def main(argv):
             sys.exit()
         elif option in ("-i", "--input-file"):
             config["input_file"] = argument
-        elif option in ("-o", "--output-dir"):
-            config["output_dir"] = argument
+        elif option in ("-o", "--output-file"):
+            config["output_file"] = argument
         else:
             usage()
             sys.exit(2)
+
+    if len(args) > 0:
+        config['text'] = args[0]
 
     my_converter = Text2Image(config)
     my_converter.convert()

@@ -12,4 +12,9 @@
 
 __version__ = '0.1-dev'
 
+DEFAULT_IMAGE_FORMAT = "PNG"
+DEFAULT_FONT_FILE = "/Library/Fonts/Arial.ttf"
+
+TWITTER_LIMIT = 140
+
 from converter import Text2Image
