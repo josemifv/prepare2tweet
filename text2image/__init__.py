@@ -14,6 +14,8 @@ __version__ = '0.1-dev'
 
 DEFAULT_IMAGE_FORMAT = "PNG"
 DEFAULT_FONT_FILE = "/Library/Fonts/Arial.ttf"
+DEFAULT_FONT_COLOR = "#FFF"
+DEFAULT_BG_COLOR = "#000"
 
 TWITTER_LIMIT = 140
 
