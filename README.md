@@ -32,8 +32,8 @@ README.md - This file.
 The first step to using any software package is getting it properly installed. The project is developed in GitHub, so it can be downloaded anytime or checkout to work with the sources. The following steps describes the installation from GitHub.
 
 ```console
-    $ git clone https://github.com/josemifv/python-text-2-image.git
-    $ cd python-text-2-image
+    $ git clone https://github.com/josemifv/prepare2tweet.git
+    $ cd prepare2tweet
     $ virtualenv venv --distribute
 	New python executable in venv/bin/python
 	Installing setuptools, pip...done.    
