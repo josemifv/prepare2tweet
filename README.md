@@ -31,21 +31,45 @@ README.md - This file.
 
 The first step to using any software package is getting it properly installed. The project is developed in GitHub, so it can be downloaded anytime or checkout to work with the sources. The following steps describes the installation from GitHub.
 
-.. code-block:: console
+```console
     $ git clone https://github.com/josemifv/python-text-2-image.git
     $ cd python-text-2-image
     $ virtualenv venv --distribute
-    Installing distribute............done.
-    $ . venv/bin/activate
+	New python executable in venv/bin/python
+	Installing setuptools, pip...done.    
+	$ . venv/bin/activate
     $ python setup.py install
     ...
-    Finished processing dependencies for Text2Image
+    Finished processing dependencies for text2image
+```
 
 ## Usage
 
 Prepare2Tweet is very easy to use. Just execute the command as follows to convert a text to an image:
 
-.. code-block:: console
+```console
     $ python prepare2tweet.py -o output.png "I want to convert this text to an image"
+```
 
-As the text is shorter that 140 characters, the program will do nothing :)
+As the text is shorter that 140 characters, the program will do nothing :). The console will show the following:
+
+```console
+	$ Your text message is shorter than 140 characters. Nothing to do here...
+```
+
+But you can exeecute one of the examples included in the examples/ directory as follows. The parameter ```-f``` specifies an input file.
+
+```console
+    $ python prepare2tweet.py -i examples/hashtags_message.txt -o output.png
+```
+
+And now the console output will be like this:
+
+```console
+Now you can tweet it: #book #hidalgo #quotes
+The image is stored in output.png
+```
+
+It must be said that if both the input file and the text is present in the script invocation, the latter will be ignored.
+
+And that's all. I hope you enjoy it ^^
