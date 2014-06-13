@@ -13,7 +13,6 @@ setup(
     packages=find_packages(),
     test_suite="text2image.tests",
     install_requires=[
-        "pillow==2.4.0",
-        "wsgiref==0.1.2"
+        "pillow==2.4.0"
     ]
 )
