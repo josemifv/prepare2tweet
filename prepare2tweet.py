@@ -5,6 +5,9 @@ from text2image import Text2Image
 
 
 def usage():
+    """
+    It prints the script usage and the parameters needed to work properly.
+    """
     print """
     Name
     \t prepare2tweet.py - Converts a long text message to an image (so you can tweet it ^^)\n
@@ -18,6 +21,12 @@ def usage():
 
 
 def main(argv):
+    """
+    Main function.
+
+    :param argv: Program parameters.
+    """
+    # Get and check program parameters
     try:
         options, args = getopt.gnu_getopt(argv, "hi:o:", ["help", "input-file=", "output-file="])
     except getopt.GetoptError as err:
@@ -41,9 +50,9 @@ def main(argv):
     if len(args) > 0:
         config["text"] = args[0]
 
+    # If all dependencies are satisfied, the image generation process is started
     if config.has_key("output_file") and (config.has_key("text") or config.has_key("input_file")):
-        my_converter = Text2Image(config)
-        text_tweetable, image_file = my_converter.convert()
+        text_tweetable, image_file = Text2Image.convert(config)
 
         if image_file is None:
             print "Your text message is shorter than 140 characters. Nothing to do here..."

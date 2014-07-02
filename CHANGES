@@ -3,6 +3,19 @@ Prepare2Tweet Changelog
 
 Here you can see the full list of changes between each Prepare2Tweet release.
 
+
+Version 0.2
+-----------
+
+Fixed hard-coded font size
+
+Removed Extractor hierarchy to simplify text readability
+
+Changes default values for image text color and background color
+
+Improved internal documentation
+
+
 Version 0.1
 -----------
 
